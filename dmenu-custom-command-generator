@@ -5,6 +5,7 @@
 #./this-script "power" "choose power option" "poweroff" "systemctl poweroff" "reboot" "systemctl reboot" "lock" "light-locker-command -l" "suspend" "systemctl suspend"
 
 # USAGE NOTES
+# !! you should probably change the value of the variable OUTPUT to a path of your choosing.. also probably might be helpful to change the path of the ln -s command near the end.
 # ON THE FIRST PARAMETER $1:
 # first parameter $1 is always the name of the file which dmenu will display, this script will generate an symlink with 
 # the filename prefixed by "dmenu-" ex. if we use file name "some-command" the symlink will be named "dmenu-some-command"
@@ -25,7 +26,7 @@
 # generates dmenu selection 
 counter=1
 dmenu_selection=""
-OUTPUT="/home/$(whoami)/.config/dmenu/custom-dmenu/"
+OUTPUT="/home/$(whoami)/.config/dmenu/custom-dmenu/" ## EDIT this to whatever filepath you want
 for parameter in "$@"
 do
 parameter=$(echo "$parameter")
@@ -76,6 +77,6 @@ echo "fi" >> $OUTPUT
 #printf "$get_selection_function" >> $OUTPUT
 chmod +x $OUTPUT
 sym_link
-ln -s $OUTPUT /usr/local/bin/dmenu-$FILENAME
+ln -s $OUTPUT /usr/local/bin/dmenu-$FILENAME ## EDIT this to whatever you want
 echo -e "the file $OUTPUT has been created its contents are:"
 cat $OUTPUT
