@@ -2,6 +2,7 @@
 
 # WHAT THIS DOES: this script will generate a custom dmenu that will display user defined options and upon selection will run some command.
 # it is great for categorizing commonly used commands. Example, I use this for poweroff,reboot,lock,suspend.
+# this is an example of generating a custom dmenu command that will show power options:
 #./this-script "power" "choose power option" "poweroff" "systemctl poweroff" "reboot" "systemctl reboot" "lock" "light-locker-command -l" "suspend" "systemctl suspend"
 
 # USAGE NOTES
