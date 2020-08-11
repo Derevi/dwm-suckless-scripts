@@ -4,6 +4,7 @@
 # it is great for categorizing commonly used commands. Example, I use this for poweroff,reboot,lock,suspend.
 # this is an example of generating a custom dmenu command that will show power options:
 #./this-script "power" "choose power option" "poweroff" "systemctl poweroff" "reboot" "systemctl reboot" "lock" "light-locker-command -l" "suspend" "systemctl suspend"
+# in addition to creating generating a script it will also create a symlink of the script so that it is easier to call
 
 # USAGE NOTES
 # !! you should probably change the value of the variable OUTPUT to a path of your choosing.. also probably might be helpful to change the path of the ln -s command near the end.
